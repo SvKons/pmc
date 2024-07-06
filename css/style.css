@@ -20,7 +20,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    background-image: url(../img/background.jpg);
+    background-image: url(../img/main-bg.jpg);
     background-position-y: 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -28,9 +28,6 @@ body {
 }
 
 .wrap {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     width: 100%;
     max-width: 1440px;
     min-width: 640px;
@@ -68,6 +65,8 @@ body {
 .main-info__wrap {
     display: flex;
     gap: 50px;
+    line-height: 1.4;
+    min-width: 1170px;
 }
 
 .main-info__text-left {
@@ -82,8 +81,8 @@ body {
 }
 
 .main-info__title-right {
-    max-width: 500px;
-    font-size: 35px;
+    max-width: 427px;
+    font-size: 24px;
     color: var(--basic-white);
 }
 
@@ -96,6 +95,11 @@ body {
     width: 100px;
 }
 
+.menu__close {
+    border: none;
+    cursor: pointer;
+}
+
 .blocks {
     min-width: 300px;
     display: flex;
@@ -103,15 +107,64 @@ body {
     align-items: center;
 }
 
+.blocks__arrow {
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+}
+
 .blocks__services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     color: var(--basic-white);
     text-decoration: none;
     text-transform: uppercase;
 }
 
 .menu {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     padding-top: 65px;
     background-color: #f1f2f1;
+    animation: slideIn 1s forwards;
+}
+
+.menu.slide-out {
+    animation: slideOut 1s forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.menu__wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 500px;
 }
 
 .menu__info {
@@ -133,12 +186,23 @@ body {
     color: var(--basic-black);
 }
 
+.menu__img {
+    display: flex;
+    gap: 50px;
+}
+
+.menu__cross {
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+}
+
 .copy {
     line-height: 1.4;
 }
 
 .projects {
-    padding-top: 65px;
+    padding-top: 200px;
 }
 
 .projects__info {
@@ -163,11 +227,18 @@ body {
     background-size: cover;
     display: flex;
     align-items: flex-end;
+    height: 100vh;
 }
 
 .wrap__bg-text {
     background-color: rgba(255, 255, 255, 0.5);
     width: 100%;
+}
+
+.projects__wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .projects__item {
@@ -197,6 +268,12 @@ body {
     display: flex;
     flex-direction: column;
     gap: 150px;
+}
+
+.services__wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .engineering-services,
