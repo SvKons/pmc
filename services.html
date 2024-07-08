@@ -3,57 +3,151 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- <link rel="preload" href="fonts/ribeyeregular.woff" as="font" />
-        <link rel="preload" href="fonts/ribeyeregular.woff2" as="font" /> -->
         <link href="css/reset.css" rel="stylesheet" />
         <link href="css/style.css" rel="stylesheet" />
         <title>PMC</title>
     </head>
     <body>
+        <div class="background"></div>
+
         <header class="header">
             <div class="header__wrap">
                 <a href="index.html" class="header__link">
                     <img src="img/logo-white.png" width="100px" alt="Logo PMC Company" class="header__logo" />
                 </a>
-                <span class="header__tel">+7495-999-9999</span>
-                <span class="header__search">Лупа</span>
+                <div class="header__right-menu">
+                    <a href="tel:+74959999999" class="header__tel" onclick="showPhoneNumber()">+7495-999-9999</a>
+                    <img src="/img/loop.png" width="20px" alt="Лупа" class="header__search" />
+                    <input type="text" class="header__search-input" placeholder="Поиск..." />
+                </div>
             </div>
         </header>
 
         <main class="page-main">
             <section class="main-info wrap">
-                <div class="main-info__wrap">
-                    <div class="main-info__text-left">
-                        <p class="main-info__title-left">
-                            Успешные проекты начинаются <br />
-                            с плана
-                        </p>
-                        <span class="main-info__text"
-                            >от ТЭО до ввода <br />
-                            в эксплуатацию</span
-                        >
+                <div class="slider">
+                    <div class="slide active">
+                        <div class="main-info__wrap">
+                            <div class="main-info__text-left">
+                                <p class="main-info__title-left">
+                                    Успешные проекты начинаются <br />
+                                    с плана
+                                </p>
+                                <span class="main-info__text">
+                                    от ТЭО до ввода <br />
+                                    в эксплуатацию
+                                </span>
+                            </div>
+                            <p class="main-info__title-right">Ремонтно-восстановительные Работы Энергоблока №3 Березовской ГРЭС</p>
+                        </div>
                     </div>
-                    <p class="main-info__title-right">Ремонтно-восстановительные Работы Энергоблока №3 Березовской ГРЭС</p>
+                    <div class="slide">
+                        <div class="main-info__wrap">
+                            <div class="main-info__text-left">
+                                <p class="main-info__title-left">
+                                    Успешные проекты начинаются <br />
+                                    с плана
+                                </p>
+                                <span class="main-info__text">
+                                    от ТЭО до ввода <br />
+                                    в эксплуатацию
+                                </span>
+                            </div>
+                            <p class="main-info__title-right">Ремонтно-восстановительные Работы Энергоблока №3 Березовской ГРЭС</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="main-info__wrap">
+                            <div class="main-info__text-left">
+                                <p class="main-info__title-left">
+                                    Успешные проекты начинаются <br />
+                                    с плана
+                                </p>
+                                <span class="main-info__text">
+                                    от ТЭО до ввода <br />
+                                    в эксплуатацию
+                                </span>
+                            </div>
+                            <p class="main-info__title-right">Ремонтно-восстановительные Работы Энергоблока №3 Березовской ГРЭС</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="main-info__wrap">
+                            <div class="main-info__text-left">
+                                <p class="main-info__title-left">
+                                    Успешные проекты начинаются <br />
+                                    с плана
+                                </p>
+                                <span class="main-info__text">
+                                    от ТЭО до ввода <br />
+                                    в эксплуатацию
+                                </span>
+                            </div>
+                            <p class="main-info__title-right">Ремонтно-восстановительные Работы Энергоблока №3 Березовской ГРЭС</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="main-info__wrap">
+                            <div class="main-info__text-left">
+                                <p class="main-info__title-left">
+                                    Успешные проекты начинаются <br />
+                                    с плана
+                                </p>
+                                <span class="main-info__text">
+                                    от ТЭО до ввода <br />
+                                    в эксплуатацию
+                                </span>
+                            </div>
+                            <p class="main-info__title-right">Ремонтно-восстановительные Работы Энергоблока №3 Березовской ГРЭС</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="main-info__wrap">
+                            <div class="main-info__text-left">
+                                <p class="main-info__title-left">
+                                    Успешные проекты начинаются <br />
+                                    с плана
+                                </p>
+                                <span class="main-info__text">
+                                    от ТЭО до ввода <br />
+                                    в эксплуатацию
+                                </span>
+                            </div>
+                            <p class="main-info__title-right">Ремонтно-восстановительные Работы Энергоблока №3 Березовской ГРЭС</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="blocks">
                     <a href="" class="blocks__services">
                         <img src="./img/arrow.png" alt="Стрелка" class="blocks__arrow" />
                         <span class="blocks__menu">Меню</span>
                     </a>
-                    <span href="" class="blocks__services">Точки</span>
+                    <div class="dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
                 </div>
             </section>
 
             <section class="menu hidden">
-                <div class="wrap menu__wrap">
-                    <div class="menu__info">
-                        <a href="index.html" class="menu__link">
-                            <img src="img/logo-no-background.png" width="100px" class="menu__logo" alt="Лого PMCCON" />
-                        </a>
-                        <div class="menu__list">
-                            <a href="projects.html" class="menu__item">Проекты</a>
-                            <a href="services.html" class="menu__item">Услуги</a>
-                            <a href="" class="menu__item">Контакты</a>
+                <div class="wrap menu__bg">
+                    <img src="./img/bg-grey.png" alt="Серый фон" class="grey__bg" />
+                    <div class="menu__wrap-main">
+                        <div class="menu__logo">
+                            <a href="index.html" class="menu__link">
+                                <img src="img/logo-no-background.png" width="100px" class="menu__logo__img" alt="Лого PMCCON" />
+                            </a>
+                        </div>
+                        <div class="menu__info">
+                            <div class="menu__list">
+                                <a href="projects.html" class="menu__item">Проекты</a>
+                                <a href="services.html" class="menu__item">Услуги</a>
+                                <a href="" class="menu__item">Контакты</a>
+                            </div>
                         </div>
                         <p class="copy">
                             ООО «ПиЭмСи КОН» <br />
@@ -70,87 +164,100 @@
             </section>
 
             <section class="services engineering-services">
-                <div class="wrap services__wrap">
-                    <div class="services__block">
-                        <div class="services__logo">
-                            <img src="img/logo-no-background.png" width="100px" class="menu__logo" alt="Лого PMCCON" />
+                <div class="services__bg">
+                    <img src="./img/bg-grey.png" alt="Серый фон" class="grey__bg" />
+                    <div class="wrap services__wrap-top">
+                        <div class="services__info services__info__top">
+                            <div class="services__logo">
+                                <img src="img/logo-no-background.png" width="100px" alt="Лого PMCCON" />
+                            </div>
+                            <div class="services__description">
+                                <p class="services__title-description">Услуги</p>
+                                <p class="services__text-description">
+                                    <span class="services__span">PMCCON</span> имеет опыт и компетенции для представления интересов <br />как на стороне
+                                    заказчиков, так и на стороне подрядных организаций
+                                </p>
+                            </div>
                         </div>
-                        <div class="services__description">
-                            <p class="services__title-description">Услуги</p>
-                            <p class="services__text-description">
-                                <span class="services__span">PMCCON</span> имеет опыт и компетенции для представления интересов как на стороне заказчиков, так и
-                                на стороне подрядных организаций
+
+                        <div class="projects__img">
+                            <img src="img/engineering-services.jpg" width="450px" height="600px" alt="Изображение Инжиниринговые услуги" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrap services__wrap">
+                    <div class="services__wrap-bg">
+                        <div class="services__img">
+                            <img src="img/engineering-services.jpg" width="450px" height="600px" alt="Изображение Инжиниринговые услуги" />
+                        </div>
+                        <div class="services__info">
+                            <h2 class="services__title">Инжиниринговые услуги</h2>
+                            <p class="services__text">
+                                Залог успешной реализации любого Проекта — <br />это его своевременная проработка, включая <br />
+                                план реализации, бюджет, оценки рисков и<br />
+                                процедур управления проектом
                             </p>
+                            <ul class="services__list">
+                                <li class="services__item">> Разработка концепции реализации проектов</li>
+                                <li class="services__item">> Разработка Техникоэкономического обоснования</li>
+                                <li class="services__item">> Разработка Pre feed</li>
+                                <li class="services__item">> Разработка логистической концепции</li>
+                                <li class="services__item">> Аудит бизнес-процессов, разработка процедур и проектных методологий</li>
+                            </ul>
                         </div>
                     </div>
+                </div>
 
-                    <div class="projects__img">
-                        <img src="img/engineering-services.jpg" width="450px" height="600px" alt="Изображение Инжиниринговые услуги" />
+                <div class="wrap services__wrap">
+                    <div class="services__wrap-bg services__wrap-bg__pmc">
+                        <div class="services__info services__info__pmc">
+                            <h2 class="services__title">Управление проектом PMC</h2>
+                            <p class="services__text">
+                                При реализации проектов инвестору необходимо контролировать процесс и оказывать <br />
+                                управляющее воздействие. Наша команда готова выступить в роли PMC-подрядчика
+                            </p>
+                            <ul class="services__list">
+                                <li class="services__item">> Представление услуг технического заказчика</li>
+                                <li class="services__item">> Контроль разработки проектной и рабочей документации</li>
+                                <li class="services__item">> Календарно-сетевое планирование и отчетность</li>
+                                <li class="services__item">> Независимая оценка стоимости проекта и контроль затрат на стадии реализации</li>
+                                <li class="services__item">> Квалификация поставщиков оборудования и материалов</li>
+                                <li class="services__item">> Организация и контроль выполнения строительных работ</li>
+                                <li class="services__item">
+                                    > Организация тендеров, включая подготовку документации, технический и коммерческий анализ предложений
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pmc__img">
+                            <img src="img/engineering-services.jpg" width="450px" height="600px" alt="Изображение Инжиниринговые услуги" />
+                        </div>
                     </div>
                 </div>
 
                 <div class="wrap services__wrap">
-                    <div class="services__img">
-                        <img src="img/engineering-services.jpg" width="450px" height="600px" alt="Изображение Инжиниринговые услуги" />
-                    </div>
-                    <div class="services__info">
-                        <h2 class="services__title">Инжиниринговые услуги</h2>
-                        <p class="services__text">
-                            Залог успешной реализации любого Проекта — это его своевременная проработка, включая план реализации, бюджет, оценки рисков и
-                            процедур управления проектом
-                        </p>
-                        <ul class="services__list">
-                            <li class="services__item">Разработка концепции реализации проектов</li>
-                            <li class="services__item">Разработка Техникоэкономического обоснования</li>
-                            <li class="services__item">Разработка Pre feed</li>
-                            <li class="services__item">Разработка логистической концепции</li>
-                            <li class="services__item">Аудит бизнес-процессов, разработка процедур и проектных методологий</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="wrap services__wrap">
-                    <div class="pmc__info">
-                        <h2 class="pmc__title">Управление проектом PMC</h2>
-                        <p class="pmc__text">
-                            При реализации проектов инвестору необходимо контролировать процесс и оказывать управляющее воздействие. Наша команда готова
-                            выступить в роли PMC-подрядчика
-                        </p>
-                        <ul class="pmcs__list">
-                            <li class="pmc__item">Представление услуг технического заказчика</li>
-                            <li class="pmc__item">Контроль разработки проектной и рабочей документации</li>
-                            <li class="pmc__item">Календарно-сетевое планирование и отчетность</li>
-                            <li class="pmc__item">Независимая оценка стоимости проекта и контроль затрат на стадии реализации</li>
-                            <li class="pmc__item">Квалификация поставщиков оборудования и материалов</li>
-                            <li class="pmc__item">Организация и контроль выполнения строительных работ</li>
-                            <li class="pmc__item">Организация тендеров, включая подготовку документации, технический и коммерческий анализ предложений</li>
-                        </ul>
-                    </div>
-                    <div class="pmc__img">
-                        <img src="img/engineering-services.jpg" width="450px" height="600px" alt="Изображение Инжиниринговые услуги" />
-                    </div>
-                </div>
-
-                <div class="wrap services__wrap">
-                    <div class="pmc__img">
-                        <img src="img/engineering-services.jpg" width="450px" height="600px" alt="Изображение Инжиниринговые услуги" />
-                    </div>
-                    <div class="pmc__info">
-                        <h2 class="pmc__title">
-                            VPS <br />
-                            ORacle primavera
-                        </h2>
-                        <p class="pmc__text">
-                            Мы предоставляем инструменты по управлению проектом вашей команде. На сервере размещены все необходимое для успешной реализации
-                            проектом
-                        </p>
-                        <ul class="pmcs__list">
-                            <li class="pmc__item">Oracle Primavera содержание и расписание</li>
-                            <li class="pmc__item">Cloud обмен файлами</li>
-                            <li class="pmc__item">Office редактирование документов</li>
-                            <li class="pmc__item">Task скрам канбан</li>
-                            <li class="pmc__item">Talk видеоконференции</li>
-                        </ul>
+                    <div class="services__wrap-bg">
+                        <div class="pmc__img">
+                            <img src="img/engineering-services.jpg" width="450px" height="600px" alt="Изображение Инжиниринговые услуги" />
+                        </div>
+                        <div class="services__info">
+                            <h2 class="services__title">
+                                VPS <br />
+                                ORacle primavera
+                            </h2>
+                            <p class="services__text">
+                                Мы предоставляем инструменты по управлению проектом вашей команде. На сервере размещены <br />
+                                все необходимое для успешной реализации <br />
+                                проектом
+                            </p>
+                            <ul class="services__list">
+                                <li class="services__item">> Oracle Primavera содержание и расписание</li>
+                                <li class="services__item">> Cloud обмен файлами</li>
+                                <li class="services__item">> Office редактирование документов</li>
+                                <li class="services__item">> Task скрам канбан</li>
+                                <li class="services__item">> Talk видеоконференции</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -164,5 +271,8 @@
             </div>
         </footer>
         <script src="./js/menu.js"></script>
+        <script src="./js/slider.js"></script>
+        <script src="./js/menu-scroll.js"></script>
+        <script src="./js/search.js"></script>
     </body>
 </html>

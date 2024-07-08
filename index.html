@@ -3,57 +3,151 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- <link rel="preload" href="fonts/ribeyeregular.woff" as="font" />
-        <link rel="preload" href="fonts/ribeyeregular.woff2" as="font" /> -->
         <link href="css/reset.css" rel="stylesheet" />
         <link href="css/style.css" rel="stylesheet" />
         <title>PMC</title>
     </head>
     <body>
+        <div class="background"></div>
+
         <header class="header">
             <div class="header__wrap">
                 <a href="index.html" class="header__link">
                     <img src="img/logo-white.png" width="100px" alt="Logo PMC Company" class="header__logo" />
                 </a>
-                <span class="header__tel">+7495-999-9999</span>
-                <span class="header__search">Лупа</span>
+                <div class="header__right-menu">
+                    <a href="tel:+74959999999" class="header__tel" onclick="showPhoneNumber()">+7495-999-9999</a>
+                    <img src="/img/loop.png" width="20px" alt="Лупа" class="header__search" />
+                    <input type="text" class="header__search-input" placeholder="Поиск..." />
+                </div>
             </div>
         </header>
 
         <main class="page-main">
             <section class="main-info wrap">
-                <div class="main-info__wrap">
-                    <div class="main-info__text-left">
-                        <p class="main-info__title-left">
-                            Успешные проекты начинаются <br />
-                            с плана
-                        </p>
-                        <span class="main-info__text"
-                            >от ТЭО до ввода <br />
-                            в эксплуатацию</span
-                        >
+                <div class="slider">
+                    <div class="slide active">
+                        <div class="main-info__wrap">
+                            <div class="main-info__text-left">
+                                <p class="main-info__title-left">
+                                    Успешные проекты начинаются <br />
+                                    с плана
+                                </p>
+                                <span class="main-info__text">
+                                    от ТЭО до ввода <br />
+                                    в эксплуатацию
+                                </span>
+                            </div>
+                            <p class="main-info__title-right">Ремонтно-восстановительные Работы Энергоблока №3 Березовской ГРЭС</p>
+                        </div>
                     </div>
-                    <p class="main-info__title-right">Ремонтно-восстановительные Работы Энергоблока №3 Березовской ГРЭС</p>
+                    <div class="slide">
+                        <div class="main-info__wrap">
+                            <div class="main-info__text-left">
+                                <p class="main-info__title-left">
+                                    Успешные проекты начинаются <br />
+                                    с плана
+                                </p>
+                                <span class="main-info__text">
+                                    от ТЭО до ввода <br />
+                                    в эксплуатацию
+                                </span>
+                            </div>
+                            <p class="main-info__title-right">Ремонтно-восстановительные Работы Энергоблока №3 Березовской ГРЭС</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="main-info__wrap">
+                            <div class="main-info__text-left">
+                                <p class="main-info__title-left">
+                                    Успешные проекты начинаются <br />
+                                    с плана
+                                </p>
+                                <span class="main-info__text">
+                                    от ТЭО до ввода <br />
+                                    в эксплуатацию
+                                </span>
+                            </div>
+                            <p class="main-info__title-right">Ремонтно-восстановительные Работы Энергоблока №3 Березовской ГРЭС</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="main-info__wrap">
+                            <div class="main-info__text-left">
+                                <p class="main-info__title-left">
+                                    Успешные проекты начинаются <br />
+                                    с плана
+                                </p>
+                                <span class="main-info__text">
+                                    от ТЭО до ввода <br />
+                                    в эксплуатацию
+                                </span>
+                            </div>
+                            <p class="main-info__title-right">Ремонтно-восстановительные Работы Энергоблока №3 Березовской ГРЭС</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="main-info__wrap">
+                            <div class="main-info__text-left">
+                                <p class="main-info__title-left">
+                                    Успешные проекты начинаются <br />
+                                    с плана
+                                </p>
+                                <span class="main-info__text">
+                                    от ТЭО до ввода <br />
+                                    в эксплуатацию
+                                </span>
+                            </div>
+                            <p class="main-info__title-right">Ремонтно-восстановительные Работы Энергоблока №3 Березовской ГРЭС</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="main-info__wrap">
+                            <div class="main-info__text-left">
+                                <p class="main-info__title-left">
+                                    Успешные проекты начинаются <br />
+                                    с плана
+                                </p>
+                                <span class="main-info__text">
+                                    от ТЭО до ввода <br />
+                                    в эксплуатацию
+                                </span>
+                            </div>
+                            <p class="main-info__title-right">Ремонтно-восстановительные Работы Энергоблока №3 Березовской ГРЭС</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="blocks">
                     <a href="" class="blocks__services">
                         <img src="./img/arrow.png" alt="Стрелка" class="blocks__arrow" />
                         <span class="blocks__menu">Меню</span>
                     </a>
-                    <span href="" class="">Точки</span>
+                    <div class="dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
                 </div>
             </section>
 
             <section class="menu hidden">
-                <div class="wrap menu__wrap">
-                    <div class="menu__info">
-                        <a href="index.html" class="menu__link">
-                            <img src="img/logo-no-background.png" width="100px" class="menu__logo" alt="Лого PMCCON" />
-                        </a>
-                        <div class="menu__list">
-                            <a href="projects.html" class="menu__item">Проекты</a>
-                            <a href="services.html" class="menu__item">Услуги</a>
-                            <a href="" class="menu__item">Контакты</a>
+                <div class="wrap menu__bg">
+                    <img src="./img/bg-grey.png" alt="Серый фон" class="grey__bg" />
+                    <div class="menu__wrap-main">
+                        <div class="menu__logo">
+                            <a href="index.html" class="menu__link">
+                                <img src="img/logo-no-background.png" width="100px" class="menu__logo__img" alt="Лого PMCCON" />
+                            </a>
+                        </div>
+                        <div class="menu__info">
+                            <div class="menu__list">
+                                <a href="projects.html" class="menu__item">Проекты</a>
+                                <a href="services.html" class="menu__item">Услуги</a>
+                                <a href="" class="menu__item">Контакты</a>
+                            </div>
                         </div>
                         <p class="copy">
                             ООО «ПиЭмСи КОН» <br />
@@ -70,13 +164,16 @@
             </section>
         </main>
 
-        <!-- <footer class="page-footer wrap">
+        <footer class="page-footer wrap">
             <p class="copyright">© PMCCON, 2024 г., Все права защищены</p>
             <div class="contacts">
                 <p class="contacts__email">pmc@mail.ru</p>
                 <p class="contacts__tel">+7999-999-9999</p>
             </div>
-        </footer> -->
+        </footer>
         <script src="./js/menu.js"></script>
+        <script src="./js/slider.js"></script>
+        <script src="./js/menu-scroll.js"></script>
+        <script src="./js/search.js"></script>
     </body>
 </html>
