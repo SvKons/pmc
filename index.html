@@ -9,7 +9,6 @@
     </head>
     <body>
         <div class="background"></div>
-
         <header class="header">
             <div class="header__wrap">
                 <a href="index.html" class="header__link">
@@ -17,10 +16,46 @@
                 </a>
                 <div class="header__right-menu">
                     <a href="tel:+74959999999" class="header__tel" onclick="showPhoneNumber()">+7495-999-9999</a>
-                    <img src="/img/loop.png" width="20px" alt="Лупа" class="header__search" />
-                    <input type="text" class="header__search-input" placeholder="Поиск..." />
+                    <div class="app">
+                        <button class="toggle">
+                            <div><span></span></div>
+                            <div><span></span></div>
+                            <div><span></span></div>
+                        </button>
+                    </div>
                 </div>
             </div>
+            <section class="menu hidden">
+                <div class="wrap menu__bg">
+                    <img src="./img/bg-grey.png" alt="Серый фон" class="grey__bg" />
+                    <div class="menu__wrap-main">
+                        <div class="menu__logo">
+                            <a href="index.html" class="menu__link">
+                                <img src="img/logo-no-background.png" width="100px" class="menu__logo__img" alt="Лого PMCCON" />
+                            </a>
+                        </div>
+                        <div class="menu__info">
+                            <div class="menu__list">
+                                <a href="projects.html" class="menu__item">Проекты</a>
+                                <a href="services.html" class="menu__item">Услуги</a>
+                                <a href="" class="menu__item">Контакты</a>
+                            </div>
+                        </div>
+                        <p class="copy">
+                            <span class="copy-text">
+                                ООО «ПиЭмСи КОН» <br />
+                                2024
+                            </span>
+                        </p>
+                    </div>
+                    <div class="menu__img">
+                        <img src="img/engineering-services.jpg" width="450px" height="600px" alt="Изображение Инжиниринговые услуги" />
+                        <button href="" class="menu__close">
+                            <img src="./img/cross.png" alt="Иконка крестика" class="menu__cross" />
+                        </button>
+                    </div>
+                </div>
+            </section>
         </header>
 
         <main class="page-main">
@@ -118,10 +153,6 @@
                     </div>
                 </div>
                 <div class="blocks">
-                    <a href="" class="blocks__services">
-                        <img src="./img/arrow.png" alt="Стрелка" class="blocks__arrow" />
-                        <span class="blocks__menu">Меню</span>
-                    </a>
                     <div class="dots">
                         <span class="dot active"></span>
                         <span class="dot"></span>
@@ -132,42 +163,9 @@
                     </div>
                 </div>
             </section>
-
-            <section class="menu hidden">
-                <div class="wrap menu__bg">
-                    <img src="./img/bg-grey.png" alt="Серый фон" class="grey__bg" />
-                    <div class="menu__wrap-main">
-                        <div class="menu__logo">
-                            <a href="index.html" class="menu__link">
-                                <img src="img/logo-no-background.png" width="100px" class="menu__logo__img" alt="Лого PMCCON" />
-                            </a>
-                        </div>
-                        <div class="menu__info">
-                            <div class="menu__list">
-                                <a href="projects.html" class="menu__item">Проекты</a>
-                                <a href="services.html" class="menu__item">Услуги</a>
-                                <a href="" class="menu__item">Контакты</a>
-                            </div>
-                        </div>
-                        <p class="copy">
-                            <span class="copy-text">
-                                ООО «ПиЭмСи КОН» <br />
-                                2024
-                            </span>
-                        </p>
-                    </div>
-                    <div class="menu__img">
-                        <img src="img/engineering-services.jpg" width="450px" height="600px" alt="Изображение Инжиниринговые услуги" />
-                        <button href="" class="menu__close">
-                            <img src="./img/cross.png" alt="Иконка крестика" class="menu__cross" />
-                        </button>
-                    </div>
-                </div>
-            </section>
         </main>
+
         <script src="./js/menu.js"></script>
         <script src="./js/slider.js"></script>
-        <script src="./js/menu-scroll.js"></script>
-        <script src="./js/search.js"></script>
     </body>
 </html>
