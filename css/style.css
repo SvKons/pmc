@@ -3,6 +3,7 @@
 :root {
     --basic-white: #fff;
     --basic-black: #000;
+    --basic-grey: #aaa;
     --basci-light-grey: #f1f2f1;
     --basic-orange: #ff7c00;
     --basic-orange-transparent: rgba(234, 129, 30, 0.897);
@@ -74,7 +75,8 @@ body {
     flex-grow: 1;
 }
 
-.header__logo {
+.header__logo,
+.footer__logo {
     margin: 10px 15px;
 }
 
@@ -87,14 +89,14 @@ body {
     align-items: center;
 }
 
-.header__tel {
+.tel {
     font-size: 24px;
     text-decoration: none;
     color: var(--basic-white);
+    transition: color 0.3s ease;
 }
 
 .toggle {
-    transition: none;
     display: inline-flex;
     flex-direction: column;
     justify-content: space-around;
@@ -107,6 +109,16 @@ body {
     margin: 28px 0;
     z-index: 10;
     overflow: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
+}
+
+.fixed-toggle {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .toggle:focus {
@@ -157,8 +169,14 @@ body {
     width: 22px;
 }
 
-.header__tel__black {
+.tel__black {
     color: var(--basic-black);
+    transition: color 0.3s ease;
+}
+
+.tel:hover,
+.tel__black:hover {
+    color: var(--basic-orange);
 }
 
 .toggle div .toggle__black {
@@ -345,19 +363,7 @@ body {
     color: var(--basic-black);
     opacity: 0;
     transform: translateX(-20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.menu__item:nth-child(1) {
-    transition-delay: 0.3s;
-}
-
-.menu__item:nth-child(2) {
-    transition-delay: 0.4s;
-}
-
-.menu__item:nth-child(3) {
-    transition-delay: 0.5s;
+    transition: opacity 0.5s ease, transform 0.5s ease, color 0.3s ease;
 }
 
 .menu__item.visible {
@@ -379,8 +385,8 @@ body {
     align-items: center;
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-    transition-delay: 0.5s;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transition-delay: 0.3s;
 }
 
 .menu__img.visible {
@@ -415,7 +421,19 @@ body {
 }
 
 .copy {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.2s ease, transform 0.5s ease;
+}
+
+.copy.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.copy {
     line-height: 1.4;
+    transition-delay: 0.1s;
 }
 
 /* Projects */
@@ -485,6 +503,10 @@ body {
     cursor: pointer;
 }
 
+.projects__name {
+    transition: color 0.3s ease;
+}
+
 .projects__name:hover {
     color: var(--basic-orange);
 }
@@ -529,32 +551,50 @@ body {
     margin-left: auto;
 }
 
-.projects-top__img {
+.projects-top__img,
+.services__img,
+.contacts__email,
+.contacts__tel {
     opacity: 0;
     transform: translateX(-80px);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-.projects-top__img.show {
+.contacts__tel {
+    opacity: 0;
+    transform: translateX(80px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.projects-top__img.show,
+.services__img.show,
+.contacts__email.show,
+.contacts__tel.show {
     opacity: 1;
     transform: translateX(0);
     transition-delay: 0.4s;
 }
 
 .projects-top__title,
-.projects-top__text {
+.projects-top__text,
+.contacts__title,
+.services__title-description,
+.services__text-description {
     opacity: 0;
     transform: translateY(-50px);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.projects-top__title.show {
+.projects-top__title.show,
+.services__title-description.show,
+.contacts__title.show {
     opacity: 1;
     transform: translateY(0);
     transition-delay: 0.2s;
 }
 
-.projects-top__text.show {
+.projects-top__text.show,
+.services__text-description.show {
     opacity: 1;
     transform: translateY(0);
     transition-delay: 0.3s;
@@ -587,6 +627,10 @@ body {
 
 .services__wrap {
     position: relative;
+}
+
+.services__wrap:last-child {
+    margin-bottom: 100px;
 }
 
 .services__wrap-bg {
@@ -685,37 +729,6 @@ body {
     color: #ff7c00;
 }
 
-.services__img {
-    opacity: 0;
-    transform: translateX(-80px);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.services__img.show {
-    opacity: 1;
-    transform: translateX(0);
-    transition-delay: 0.4s;
-}
-
-.services__title-description,
-.services__text-description {
-    opacity: 0;
-    transform: translateY(-50px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.services__title-description.show {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0.2s;
-}
-
-.services__text-description.show {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0.3s;
-}
-
 .services__title {
     font-size: 52px;
     font-weight: bold;
@@ -758,8 +771,195 @@ body {
     padding-bottom: 10px;
 }
 
-.page-footer {
+/* Footer */
+
+.footer {
+    background-color: var(--basci-light-grey);
+    padding-top: 80px;
+}
+
+.footer__wrap {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+}
+
+.footer__wrap__right {
+    display: flex;
+    gap: 50px;
+}
+
+.footer__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer__item {
+    text-decoration: none;
+    font-size: 32px;
+    color: var(--basic-black);
+}
+
+.footer__item,
+.footer__email,
+.footer__contacts {
+    font-weight: 300;
+}
+
+.footer__item {
+    transition: color 0.3s ease;
+}
+
+.footer__email,
+.contacts__email {
+    font-size: 24px;
+    line-height: 1.7;
+}
+
+.footer__email__link,
+.contacts__email__link {
+    text-decoration: none;
+    color: var(--basic-black);
+    transition: color 0.3s ease;
+}
+
+.footer__item:hover,
+.footer__email__link:hover,
+.contacts__email__link:hover {
+    color: var(--basic-orange);
+}
+
+.footer__contacts,
+.contacts__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Contacts */
+
+.contacts {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts__container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 45px;
+}
+
+.contacts__form {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+}
+
+.contacts__info {
+    flex-basis: 48%;
+}
+
+.contacts__title {
+    font-size: 70px;
+    font-weight: 400;
+    color: var(--basic-black);
+    margin-bottom: 10px;
+}
+
+.contacts__details {
+    flex-basis: 48%;
+    opacity: 0;
+    transform: translateX(80px);
+}
+
+.contacts__details.show {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.contacts__details input[type='text'],
+.contacts__details input[type='email'] {
+    padding: 15px 20px;
+    color: var(--basic-black);
+    outline: none;
+    border: 1px solid var(--basic-grey);
+    margin: 35px 15px;
+    font-size: 14px;
+}
+
+.contacts__details textarea {
+    padding: 15px 20px;
+    margin: 0 15px;
+    color: var(--basic-black);
+    outline: none;
+    border: 1px solid var(--basic-grey);
+    font-size: 14px;
+    resize: none;
+}
+
+.contacts__button {
+    padding: 15px 25px;
+    color: var(--basic-white);
+    font-weight: 500;
+    background: var(--basic-black);
+    outline: none;
+    border: none;
+    margin: 15px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.contacts__details input[type='text']:focus,
+.contacts__details input[type='email']:focus,
+.contacts__details textarea:focus {
+    border-color: var(--basic-black);
+}
+
+@media (max-width: 500px) {
+    .contacts__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacts__button {
+        margin-left: 0;
+    }
+
+    .contacts__details input[type='text'],
+    .contacts__details input[type='email'],
+    .contacts__details textarea {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .contacts__details input[type='text'] {
+        margin-bottom: 0px;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+    .contacts__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacts__button {
+        margin-left: 0;
+    }
+
+    .contacts__details input[type='text'],
+    .contacts__details input[type='email'],
+    .contacts__details textarea {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .contacts__details input[type='text'] {
+        margin-bottom: 0px;
+    }
 }

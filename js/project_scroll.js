@@ -1,3 +1,5 @@
+'use strict';
+
 window.addEventListener('load', () => {
     const title = document.querySelector('.projects-top__title');
     const text = document.querySelector('.projects-top__text');

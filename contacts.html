@@ -59,46 +59,27 @@
         </header>
 
         <main class="page-main">
-            <section class="projects-top">
-                <div class="projects-top__bg">
-                    <img src="./img/bg-grey.png" alt="Серый фон" class="grey__bg" />
-                    <div class="wrap projects-top__wrap">
-                        <div class="projects-top__info">
-                            <div class="projects-top__block">
-                                <p class="projects-top__title">Проекты</p>
-                                <span class="projects-top__text">Наши проекты - <br />Наша гордость</span>
+            <section class="contacts">
+                <div class="contacts__container">
+                    <form>
+                        <div class="contacts__form">
+                            <div class="contacts__info">
+                                <h1 class="contacts__title">Свяжитесь с нами</h1>
+                                <div class="contacts__wrap">
+                                    <p class="contacts__email">
+                                        <a href="mailto:pmc@mail.ru" class="contacts__email__link">pmc@mail.ru</a>
+                                    </p>
+                                    <a href="tel:+74959999999" class="tel tel__black contacts__tel" onclick="showPhoneNumber()">+7495 999 9999</a>
+                                </div>
+                            </div>
+                            <div class="contacts__details">
+                                <input type="text" name="name" id="name" placeholder="Имя" required />
+                                <input type="email" name="email" id="email" placeholder="Email" required />
+                                <textarea name="message" id="message" cols="52" rows="7" placeholder="Сообщение..." required></textarea>
+                                <button class="contacts__button">Отправить сообщение</button>
                             </div>
                         </div>
-
-                        <div class="projects-top__img">
-                            <img src="img/engineering-services.jpg" width="450px" height="600px" alt="Изображение Инжиниринговые услуги" />
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="projects__list hidden">
-                <div class="projects__list-container">
-                    <div class="projects__wrap-list">
-                        <div class="projects__item" style="background-image: url('./img/berezovskay.jpg')">
-                            <button class="projects__name">
-                                Березовская<br />
-                                ГРЭС
-                            </button>
-                        </div>
-                        <div class="projects__item" style="background-image: url('./img/semakovskoe.jpg')">
-                            <button class="projects__name">Семаковское месторождение</button>
-                        </div>
-                        <div class="projects__item" style="background-image: url('./img/jezkazganskay.jpg')">
-                            <button class="projects__name">
-                                Жезказганская<br />
-                                ТЭЦ
-                            </button>
-                        </div>
-                        <div class="projects__item" style="background-image: url('./img/project.jpg')">
-                            <button class="projects__name">ПРОЕКТ</button>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </section>
         </main>
@@ -129,6 +110,6 @@
         </footer>
         <script src="./js/menu.js"></script>
         <script src="./js/slider.js"></script>
-        <script src="./js/project_scroll.js"></script>
+        <script src="./js/contacts.js"></script>
     </body>
 </html>

@@ -1,3 +1,5 @@
+'use strict';
+
 document.addEventListener('DOMContentLoaded', function () {
     const dots = document.querySelectorAll('.dot');
     const slides = document.querySelectorAll('.slide');
