@@ -488,7 +488,8 @@ body {
     position: relative;
 }
 
-.projects__name {
+.projects__link {
+    text-decoration: none;
     max-width: 300px;
     font-size: 32px;
     text-align: left;
@@ -503,15 +504,15 @@ body {
     cursor: pointer;
 }
 
-.projects__name {
+.projects__link {
     transition: color 0.3s ease;
 }
 
-.projects__name:hover {
+.projects__link:hover {
     color: var(--basic-orange);
 }
 
-.projects__name:active {
+.projects__link:active {
     color: var(--basic-orange-transparent);
 }
 
@@ -572,7 +573,7 @@ body {
 .contacts__tel.show {
     opacity: 1;
     transform: translateX(0);
-    transition-delay: 0.4s;
+    transition: color 0.3s ease;
 }
 
 .projects-top__title,
