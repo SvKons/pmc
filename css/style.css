@@ -80,8 +80,7 @@ body {
     flex-grow: 1;
 }
 
-.header__logo,
-.footer__logo {
+.header__logo {
     margin: 10px 15px;
 }
 
@@ -781,7 +780,7 @@ body {
 
 .footer {
     background-color: var(--basci-light-grey);
-    padding-top: 80px;
+    padding: 80px 200px;
 }
 
 .footer__wrap {
@@ -789,21 +788,25 @@ body {
     justify-content: space-between;
 }
 
-.footer__wrap__right {
-    display: flex;
-    gap: 50px;
-}
-
 .footer__menu {
     display: flex;
-    flex-direction: column;
     gap: 15px;
+    margin-bottom: 25px;
 }
 
 .footer__item {
     text-decoration: none;
     font-size: 32px;
     color: var(--basic-black);
+}
+
+.footer__item::after {
+    content: '|';
+    color: #474d4e;
+    opacity: 50%;
+    margin-top: -2px;
+    padding-right: 0px;
+    padding-left: 14px;
 }
 
 .footer__item,
@@ -820,6 +823,7 @@ body {
 .contacts__email {
     font-size: 24px;
     line-height: 1.7;
+    margin-bottom: 12px;
 }
 
 .footer__email__link,
